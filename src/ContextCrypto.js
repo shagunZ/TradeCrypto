@@ -12,7 +12,6 @@ const ContextCrypto = ({children}) => {
     useEffect(()=>{
         if(currency==="INR") setSymbol("Rs.")
                 else if(currency==="USD") setSymbol("$");
-        else if(currency==="EUR") setSymbol("€");
         
     },[currency]);
 
