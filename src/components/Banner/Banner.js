@@ -4,9 +4,11 @@ import { Container,Typography } from '@mui/material';
 import Carousel from "./Carousel";
 
 const AppWrapper = styled('div')({
-    backgroundImage: "url(./bground.jpg)",
+    backgroundImage: "url(./crypto.jpg)",
+    backgroundRepeat: "no-repeat",
     height: '100vh',
     opacity: '.8',
+    backgroundSize:"cover"
   });
   
   const BannerContent = styled('div')({

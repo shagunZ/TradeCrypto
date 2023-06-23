@@ -1,0 +1,10 @@
+
+.RowStyles{
+
+    backgroundColor: "pink",
+    cursor: "pointer",
+    fontFamily: "Montserrat",
+    "&:hover": {
+  backgroundColor: "#131111",
+}
+}

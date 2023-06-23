@@ -8,7 +8,7 @@ import { Typography } from '@mui/material';
 import ReactHtmlParser from "react-html-parser";
 import { numberWithCommas } from '../components/CoinTable';
 import { LinearProgress } from '@mui/material';
-
+import './Coin.css'
 const Coin = () => {
 
   const {id } = useParams()
@@ -34,14 +34,7 @@ const Coin = () => {
       alignItems: "center",
       justifyContent: "center",
       marginTop: 25,
-      padding: 40,
-
-      '@media screen and (maxWidth: 800px)': {
-        width: "100%",
-        marginTop: 0,
-        padding: 20,
-        paddingTop: 0,
-      },
+      // padding: 40,
       
     },
     sidebar: {
@@ -66,7 +59,7 @@ const Coin = () => {
       fontSize: "20px",
       fontWeight: "bold",
       textAlign: "center",
-      padding: "10px",
+      // padding: "10px",
       margin: "10px",
     },
     heading: {
@@ -101,7 +94,7 @@ const Coin = () => {
   if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
 
   return (
-<div style={Styles.container}>
+<div className='container' style={Styles.container}>
   <div style={Styles.sidebar}> 
   <img src={coin?.image.large} 
 alt={coin?.name}
@@ -174,8 +167,8 @@ style={{marginBottom:20}}
   </div>
 
 {/* chart  */}
-<div style={Styles.chart}>
-<CoinInfo coin={coin}/>
+<div  style={Styles.chart}>
+<CoinInfo className='chart' coin={coin}/>
 </div>
 </div>
   )

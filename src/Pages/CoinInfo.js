@@ -48,13 +48,13 @@ const fetchHistoricData = async () => {
 
 const Styles={
     container: {
-        width: "75%",
+        // width: "75%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         marginTop: 25,
-        padding: 40,
+        // padding: 40,
         // [theme.breakpoints.down("md")]: {
         //   width: "100%",
         //   marginTop: 0,

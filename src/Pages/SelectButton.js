@@ -1,21 +1,21 @@
 
-
+import './Coin.css'
 const SelectButton = ({ children, selected, onClick }) => {
 
   const Styles = {
     selectbutton: {
-      border: "1px solid gold",
+      border: "1px solid purple",
       borderRadius: 5,
-      padding: 10,
-      paddingLeft: 20,
-      paddingRight: 20,
+      // padding: 10,
+      // paddingLeft: 20,
+      // paddingRight: 20,
       fontFamily: "Montserrat",
       cursor: "pointer",
-      backgroundColor: selected ? "gold" : "",
-      color: selected ? "black" : "",
+      backgroundColor: selected ? "purple" : "",
+      color: selected ? "white" : "",
       fontWeight: selected ? 700 : 500,
       "&:hover": {
-        backgroundColor: "gold",
+        backgroundColor: "purple",
         color: "black",
       },
       width: "22%",
@@ -26,7 +26,7 @@ const SelectButton = ({ children, selected, onClick }) => {
 
 
   return (
-    <span onClick={onClick} style={Styles.selectbutton}>
+    <span className='selectbutton' onClick={onClick} style={Styles.selectbutton}>
       {children}
     </span>
   );

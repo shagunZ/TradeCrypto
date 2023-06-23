@@ -4,6 +4,7 @@ import { CoinList } from '../config/api'
 import { CryptoState } from '../ContextCrypto';
 import axios from 'axios';
 import { styled } from '@mui/system';
+import "./CoinTable.css"
 import { Container,
     createTheme,
     TableCell,
@@ -35,14 +36,14 @@ const CoinTable = () => {
 
 
 
-    const RowStyle = styled('div')({
+    const RowStyle = {
       backgroundColor: "pink",
       cursor: "pointer",
       "&:hover": {
         backgroundColor: "#131111",
       },
       fontFamily: "Montserrat",
-    });
+    };
 
 
     const paginationStyle = styled('div')({
@@ -101,7 +102,7 @@ console.log(coins);
           label="Search your Coin"
           variant='outlined'
           defaultValue="bitcoin"
-          style={{margin:20,width:"100%",background:"white"}}
+          style={{marginBottom:20,width:"100%",background:"white"}}
           onChange={(e)=>setSearch(e.target.value)}
         />
 
@@ -120,12 +121,12 @@ console.log(coins);
           {["Coin", "Price", "24h Change", "Market Cap"].map((head) => (
                     <TableCell
                       style={{
-                        color: "black",
+                        color: "white",
                         fontWeight: "700",
                         fontFamily: "Montserrat",
                       }}
                       key={head}
-                      align={head === "Coin" ? "left" : "right"}>
+                      align={head === "Coin" ? "" : "right"}>
                       {head}
                     </TableCell>
                   ))}
@@ -139,10 +140,10 @@ console.log(coins);
 {handleSearch().slice((page-1)*10,(page-1)*10+10).map((row)=>{
   const profit =  row.price_change_percentage_24h > 0;
   return(
-    <TableRow 
+    <TableRow style={{background:"white"}}
     onClick={()=>navigate(`/coins/${row.id}`)} key={row.name}>
-      <RowStyle>
-<TableCell 
+      {/* <RowStyle> */}
+<TableCell className='RowStyles'
 component="th" 
 scope="row" 
 style={{display:"flex",gap:15,}}>
@@ -187,7 +188,7 @@ style={{display:"flex",gap:15,}}>
    </TableCell>
 
 
-      </RowStyle>
+      {/* </RowStyle> */}
     </TableRow>
   )
 })}
@@ -206,6 +207,7 @@ style={{
   width: "100%",
   display: "flex",
   justifyContent: "center",
+  background:"purple"
 }}
 count={(handleSearch()?.length/10).toFixed(0)}
 onChange={(_,value)=>{
