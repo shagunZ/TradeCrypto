@@ -91,7 +91,7 @@ console.log(coins);
 <Container style={{textAlign:"center"}}>
 <Typography
           variant="h3"
-          style={{ margin: 18, fontFamily: "Montserrat" }}
+          style={{ fontFamily: "Montserrat" }}
         >
           Cryptocurrency Prices by Market Cap
         </Typography>
@@ -99,7 +99,6 @@ console.log(coins);
 {/* search feature  */}
 
 <TextField
-          label="Search your Coin"
           variant='outlined'
           defaultValue="bitcoin"
           style={{marginBottom:20,width:"100%",background:"white"}}

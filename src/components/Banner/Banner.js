@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from '@mui/system';
 import { Container,Typography } from '@mui/material';
 import Carousel from "./Carousel";
-
+import  '../CoinTable.css';
 const AppWrapper = styled('div')({
     backgroundImage: "url(./crypto.jpg)",
     backgroundRepeat: "no-repeat",
@@ -27,16 +27,16 @@ const AppWrapper = styled('div')({
     textAlign: "center",
   });
   
-  const carousel = styled('div')({
+  const carousel = {
     height: "50%",
     display: "flex",
     alignItems: "center",
-  });
+  };
   
 const Banner = () => {
   return (
     <AppWrapper>
-        <div>Banner</div>
+        
 
         <BannerContent>
         <Container>
@@ -46,13 +46,14 @@ const Banner = () => {
             variant="h2"
             style={{
               fontWeight: "bold",
-              marginBottom: 15,
+              // marginBottom: 15,
               fontFamily: "Montserrat",
             }}
           >
             Trade Crypto
           </Typography>
           <Typography
+          className='carousel'
             variant="h6"
             style={{
               color: "white",
@@ -60,7 +61,7 @@ const Banner = () => {
               fontFamily: "Montserrat",
             }}
           >
-            All Details regarding your favorite Crypto Coin
+            All Details regarding your favourite Crypto Coin
           </Typography>
         </Tagline>
 

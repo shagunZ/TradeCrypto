@@ -11,6 +11,7 @@ const CarouselStyle = styled('div')({
   height: "50%",
   display: "flex",
   alignItems: "center",
+  marginTop:"33px"
 });
 const CarouselItem = styled('div')({
   display: "flex",
@@ -19,6 +20,7 @@ const CarouselItem = styled('div')({
   cursor: "pointer",
   textTransform: "uppercase",
   color: "white",
+  
 });
 
 

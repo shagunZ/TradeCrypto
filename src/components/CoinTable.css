@@ -8,3 +8,9 @@
   backgroundColor: "#131111",
 }
 }
+
+.carousel {
+    height: "50%";
+    display: "flex";
+    alignItems: "center";
+  };

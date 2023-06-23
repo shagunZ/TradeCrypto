@@ -61,6 +61,9 @@ const Coin = () => {
       textAlign: "center",
       // padding: "10px",
       margin: "10px",
+      width:"90%",
+      position: "relative",
+      left:"20px"
     },
     heading: {
       fontWeight: "bold",

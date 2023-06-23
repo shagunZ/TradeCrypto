@@ -7,7 +7,7 @@ import { CryptoState } from '../ContextCrypto';
 
 const AppWrapper = styled('div')({
   flex: 1,
-  color: "gold",
+  color: "purple",
   fontFamily: "Montserrat",
   fontWeight: "bold !important",
   cursor: "pointer",
@@ -33,7 +33,7 @@ const Header = () => {
       <Container>
       <Toolbar>
         <AppWrapper>
-          <Typography onClick={()=>navigate('/')} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography onClick={()=>navigate('/')} variant="h6" component="div" sx={{ flexGrow: 1,fontWeight:"bold" }}>
             TradeCrypto
           </Typography>
         </AppWrapper>
@@ -42,7 +42,7 @@ const Header = () => {
             width:100,
             color:'white',
             height:40,
-            marginRight:15,
+            // marginRight:15,
           }}
     labelId="demo-simple-select-label"
     id="demo-simple-select"
